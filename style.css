@@ -78,3 +78,31 @@
 .transition-delay {
   transition-delay: 500ms;
 }
+
+/* Different ways to write CSS trainsition */
+/* transition-property: all */
+/* trainsion: [CSS property] [time value] [transition-timing-function] [transition-delay] */
+.shorthand {
+  height: 90px;
+  width: 290px;
+  font-size: 28px;
+  color: white;
+  border: none;
+  background-color: skyblue;
+  text-align: center;
+  /* transition: background-color 1s, color 3s, width 1s; */
+  /* transition-property: all; */
+  /* transition-duration: 1s; */
+  /* transition: all 1s ease-in-out 500ms; */
+
+  /* Make color trainsition after background-color transition */
+  transition: all 1s, background-color 1s ease-in-out 500ms, color 2s ease 2s;
+}
+
+.shorthand:hover {
+  background-color: salmon;
+  color: black;
+  width: 900px;
+  height: 150px;
+  border-radius: 50px;
+}
