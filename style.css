@@ -106,3 +106,12 @@
   height: 150px;
   border-radius: 50px;
 }
+
+/* Not all CSS properties can be transitioned */
+/* 1. background-image - Cannot change from one image to another image */
+/* 2. display */
+/* and so on i.e. border-style, position, flot, font-family */
+/* The key point is that all transitionable properties can be expressed by number + color because the browser can calculated the values such as width, height, background color and so on */
+/* For more information: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties */
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
