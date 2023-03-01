@@ -1,0 +1,75 @@
+.button {
+  height: 90px;
+  width: 290px;
+  font-size: 28px;
+  color: white;
+  border: none;
+  background-color: skyblue;
+  text-align: center;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+}
+
+.button:hover {
+  background-color: salmon;
+  color: black;
+}
+
+/* Make it transition smoothly - Use CSS Transition */
+/* To use CSS transition: you 'need' 2 things (Necessary);
+(1) CSS property that will change from initial state to the final state <- transition-property
+(2) Duration - Amount of time this change will tage to complete <- transition-duration
+*/
+
+/* 2 additional CSS transition properties:
+(1) Transition timing function = How the change in the property will occur <- "transition behaviour",
+    i.e. Will the background color began to change slowly at the start of the transition duration and then faster at the end?
+        Or will it change at the same rate throughtout the transition period?
+    - Transtition timing function has 5 different values:
+      1. ease - the change starts slow then go faster then finishes slow.
+      2. linear - the change occurs at the same rate throughtout the transition duration.
+      3. ease-in - the change starts slow then go faster before the end.
+      4. ease-out - the change starts fast then slows down before the end.
+      5. ease-in-out - the chanfe starts slow then go faster then finishes slow = similar to ease, but ease has a slow start that faster than ease-in-out
+      === ease - semi-slow, fast, slower vs ease-in-out - slow, fast, slow
+*/
+.move {
+  width: 250px;
+  height: 60px;
+  background-color: salmon;
+  border-radius: 20px;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  transition-property: translate();
+  /* CSS translate property can also write as a CSS function to move the element position <- 2D/3D
+  i.e. translate: 100px 20px;*/
+  transition-duration: 3s;
+}
+
+.move:hover {
+  transform: translate(900px, 0);
+}
+
+#ease {
+  transition-timing-function: ease;
+}
+
+#linear {
+  transition-timing-function: linear;
+}
+
+#ease-in {
+  transition-timing-function: ease-in;
+}
+
+#ease-out {
+  transition-timing-function: ease-out;
+}
+
+#ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+/*
+(2) Transition delay
+*/
