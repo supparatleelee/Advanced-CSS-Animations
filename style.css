@@ -8,6 +8,7 @@
   text-align: center;
   transition-property: background-color, color;
   transition-duration: 1s;
+  transition-delay: 500ms;
 }
 
 .button:hover {
@@ -44,6 +45,7 @@
   /* CSS translate property can also write as a CSS function to move the element position <- 2D/3D
   i.e. translate: 100px 20px;*/
   transition-duration: 3s;
+  /* Could be second / miliseconds */
 }
 
 .move:hover {
@@ -71,5 +73,8 @@
 }
 
 /*
-(2) Transition delay
+(2) Transition delay = The time before the transition starts. Accept second and miliseconds value.
 */
+.transition-delay {
+  transition-delay: 500ms;
+}
